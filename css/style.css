@@ -80,14 +80,18 @@
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    min-height: 200px;
+    /* min-height: 200px; */
+    background-color: #eee;
 }
 .box-footer{
     padding: 10px;
     background-color: #eee;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
 
 }
 .banner{
@@ -161,5 +165,48 @@
 }
 .form-account li a:hover{
     color: #060;
+    text-decoration: underline;
+}
+
+/* menu dọc */
+.menudoc ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menudoc ul li{
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.menudoc ul li a{
+    color: #666;
+    text-decoration: none;
+}
+
+.menudoc ul li:hover{
+    background-color: #ccc;
+}
+.searchbox input[type="text"]{
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.top10 img{
+    width: 20%;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.top10 a{
+    color: #666;
+    text-decoration: none;
+}
+.top10 a:hover{
+    color: #000;
     text-decoration: underline;
 }
