@@ -4,7 +4,14 @@
       <div class="  mb">
         <div class="box_title">CHI TIẾT SẢN PHẨM</div>
         <div class="box_content">
-          <img src="./img/iphoneX.jpg">
+          <?php 
+            extract($detail_sp);
+            $link_img = "./img/" .$img;
+            echo '<img src=" ' .$link_img.'"> </br> ';
+            echo $mota;
+            echo '<h3> style="color:red;">'.$price. '</h3>';
+          ?>
+         
         </div>
       </div>
 

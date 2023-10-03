@@ -8,40 +8,35 @@
            <table>
             <tr>
                 <th></th>
-                <th>MÃ LOẠI</th>
-                <th>TÊN LOẠI</th>
-                <th></th>
+                <th>MÃ SẢN PHẨM</th>
+                <th>TÊN SẢN PHẨM</th>
+                <th>Gía</th>
+                <th>Hình </th>
+                <th>Lượt xem</th>
             </tr>
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>001</td>
-                <td>Đồng hồ</td>
-                <td><input type="button" value="Sửa">   <input type="button" value="Xóa"></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>001</td>
-                <td>Đồng hồ</td>
-                <td><input type="button" value="Sửa">   <input type="button" value="Xóa"></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>001</td>
-                <td>Đồng hồ</td>
-                <td><input type="button" value="Sửa">   <input type="button" value="Xóa"></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>001</td>
-                <td>Đồng hồ</td>
-                <td><input type="button" value="Sửa">   <input type="button" value="Xóa"></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>001</td>
-                <td>Đồng hồ</td>
-                <td><input type="button" value="Sửa">   <input type="button" value="Xóa"></td>
-            </tr>
+            <?php 
+                foreach ($list_sp as $sanpham) {
+                    extract($sanpham);
+                    $link_img = "../img/" . $img;
+                    $suasp = "index.php?act=suasp&id=" .$id;
+                    $xoasp = "index.php?act=xoasp&id=" .$id; 
+                    echo '
+                    <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>'. $id .'</td>
+                    <td>'. $name .'</td>
+                    <td>'. $price.'</td>
+                    <td><img src="'. $link_img .'" width="100" height="100" alt=""></td>
+                    <td>'. $luotxem .'</td>
+                    <td>
+                    <a href="'. $link_suasp .'"><input type="button" value="Sửa"> </a>
+                    <a href="'. $link_xoasp .'"><input type="button" value="Xóa"> </a>
+            
+                    </td>
+                </tr>';
+                }
+            ?>
+           
            
             
            </table>
