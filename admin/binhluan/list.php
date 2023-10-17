@@ -40,8 +40,8 @@ table {
         </form>
         <?php endforeach ?>
         <div class="row mb10 ">
-            <input class="mr20" type="button" value="CHỌN TẤT CẢ">
-            <input class="mr20" type="button" value="BỎ CHỌN TẤT CẢ">
+            <!-- <input class="mr20" type="button" value="CHỌN TẤT CẢ">
+            <input class="mr20" type="button" value="BỎ CHỌN TẤT CẢ"> -->
         </div>
     </div>
 </div>
