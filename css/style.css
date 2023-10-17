@@ -80,6 +80,13 @@ float:left;
 .dropdown_content a:hover{                                                                                                                            
     background-color: #98FB98;
 }
+.dropdown_content a:active{
+    color: #ccc;
+}
+.dropdown_content a:focus{
+  color: #ccc;
+  background-color: #fff;
+}
 .dropdown:hover .dropdown_content{
     display:block;
     margin-top:13px; 
@@ -301,6 +308,7 @@ padding:5px 10px;
 background-color:#ffff;
 border-radius:5px;
 border:1px #ccc solid;
+
 }
 .selling_products img{
 width:20%;

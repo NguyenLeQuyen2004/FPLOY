@@ -1,23 +1,44 @@
-<div class="row2">
-         <div class="row2 font_title">
-          <h1>THÊM MỚI LOẠI HÀNG HÓA</h1>
-         </div>
-         <div class="row2 form_content ">
-          <form action="#" method="POST">
-           <div class="row2 mb10 form_content_container">
-           <label> Mã loại </label> <br>
-            <input type="text" name="maloai" placeholder="nhập vào mã loại">
-           </div>
-           <div class="row2 mb10">
-            <label>Tên loại </label> <br>
-            <input type="text" name="tenloai" placeholder="nhập vào tên">
-           </div>
-           <div class="row mb10 ">
-         <input class="mr20" type="submit" value="THÊM MỚI">
-         <input  class="mr20" type="reset" value="NHẬP LẠI">
 
-         <a href="index.php?act=listdm"><input  class="mr20" type="button" value="DANH SÁCH"></a>
-           </div>
-          </form>
-         </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .row{
+            border: 1px solid green;
+
+        } */
+        h2{
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="row frmtitle">
+        <h2>THÊM MỚI LOẠI DANH MỤC</h2>
+    </div>
+    <div class="row frmcontent">
+        <form action="index.php?act=adddm" method="post">
+            <div class="row mb10">
+                Mã Loại <br>
+                <input type="text" name="maloai" disabled>
+            </div>
+            <div class="row mb10">
+                Tên Loại <br>
+                <input type="text" name="tenloai">
+            </div>
+            <div class="row mb10">
+                <input type="submit" name="themmoi" value="THÊM MỚI">
+                <input type="reset" value="NHẬP LẠI">
+                <a href="index.php?act=listdm"> <input type="button" value="DANH SÁCH"></a>
+            </div>
+            <?= ($thongbao) ?? '' ?>
+        </form>
+    </div>
+</div>
+</body>
+</html>
