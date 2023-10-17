@@ -105,9 +105,9 @@ td {
                     <?php extract($value);
                         $img = $img_path . $img; ?>
                     <li style="
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;">
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;">
                         <a style="text-decoration: none; color: #000000;"
                             href="index.php?act=sanphamct&idsp=<?= $id ?>&iddm=<?= $iddm ?>">
                             <img style=" width: 100px;" src="<?= $img ?>" alt="">

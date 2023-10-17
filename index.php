@@ -17,19 +17,19 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             // bài của mình ở boxright có $get
             // ở sanpham có $post
             // =>> dùng $request
-            $kyw = isset($_REQUEST['kyw']) ? $_REQUEST['kyw'] : "";
-            $iddm = isset($_REQUEST['iddm']) ? $_REQUEST['iddm'] : 0;
-            $dssp = loadall_sanpham($kyw, $iddm);
+            $kyw = isset($_REQUEST['kyw']) ? $_REQUEST['kyw'] : ""; // từ khóa tìm kiếm
+            $iddm = isset($_REQUEST['iddm']) ? $_REQUEST['iddm'] : 0; // tìm kiếm trong dm
+            $dssp = loadall_sanpham($kyw, $iddm); // load sp
             include "view/sanpham.php";
             break;
         case "sanphamct":
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                insert_binhluan($_GET['idsp'], $_POST['noidung']);
+                insert_binhluan($_GET['idsp'], $_POST['noidung']); // thêm bình luận
             }
             if (isset($_GET['idsp']) && isset($_GET['iddm'])) {
                 $sanpham = loadone_sanpham($_GET['idsp']);
                 $spcl = load_sanpham_cungloai($_GET['idsp'], $_GET['iddm']);
-                $binhluan = loadall_binhluan($_GET['idsp']);
+                $binhluan = loadall_binhluan($_GET['idsp']); // hiển thị bình luận
             }
             include "view/chitietsanpham.php";
             break;
