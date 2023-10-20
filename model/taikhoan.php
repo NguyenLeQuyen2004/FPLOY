@@ -65,7 +65,7 @@ function sendMail($email)
 
     if ($taikhoan != false) {
         sendMailPass($email, $taikhoan['user'], $taikhoan['pass']);
-        return "gui email thanh cong";
+        return "gửi Email thành công";
     } else {
         return "Email bạn nhập ko có trong hệ thống";
     }

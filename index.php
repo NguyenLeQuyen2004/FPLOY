@@ -9,14 +9,14 @@ include "global.php";
 $dstop10 = loadall_sanpham_top10();
 $sqnew = loadall_sanpham_home();
 $selectalldm = loadall_danhmuc();
-
+// model: viết sql thực hiện chức năng
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
         case "sanpham":
             // bài của mình ở boxright có $get
             // ở sanpham có $post
-            // =>> dùng $request
+            // =>> dùng $request để lấy giữ liệu từ nhiều nguồn
             $kyw = isset($_REQUEST['kyw']) ? $_REQUEST['kyw'] : ""; // từ khóa tìm kiếm
             $iddm = isset($_REQUEST['iddm']) ? $_REQUEST['iddm'] : 0; // tìm kiếm trong dm
             $dssp = loadall_sanpham($kyw, $iddm); // load sp
@@ -28,7 +28,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             if (isset($_GET['idsp']) && isset($_GET['iddm'])) {
                 $sanpham = loadone_sanpham($_GET['idsp']);
-                $spcl = load_sanpham_cungloai($_GET['idsp'], $_GET['iddm']);
+                $spcl = load_sanpham_cungloai($_GET['idsp'], $_GET['iddm']); // lấy ra sp cùng loại
                 $binhluan = loadall_binhluan($_GET['idsp']); // hiển thị bình luận
             }
             include "view/chitietsanpham.php";
@@ -41,9 +41,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
                 if (!$checkuser && !$checkemail) {
                     insert_taikhoan($user, $pass, $email);
-                    $thongbao = "Dang ky thanh cong";
+                    $thongbao = "Đăng ký thành công";
                 } else {
-                    $thongbao = "Tai khoan da ton tai";
+                    $thongbao = "Tài khoản đã tồn tại";
                 }
             }
             include "view/login/dangky.php";
